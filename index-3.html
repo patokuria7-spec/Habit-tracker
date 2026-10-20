@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Habit Tracker</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<main>
+  <section id="auth" hidden>
+    <h1>Habit Tracker</h1>
+    <p class="sub">Log in to see your habits.</p>
+    <input class="field" id="email" type="email" placeholder="Email" autocomplete="email" aria-label="Email">
+    <input class="field" id="password" type="password" placeholder="Password (6+ characters)" autocomplete="current-password" aria-label="Password">
+    <button class="addbtn full" id="auth-btn" type="button">Log in</button>
+    <button class="link" id="auth-toggle" type="button">No account? Sign up</button>
+    <p class="msg" id="auth-msg" role="status"></p>
+  </section>
+
+  <section id="app" hidden>
+    <div class="top">
+      <h1>Habit Tracker</h1>
+      <button class="link" id="signout" type="button">Sign out</button>
+    </div>
+    <p id="sub"></p>
+    <div class="add">
+      <input id="input" type="text" placeholder="New habit, e.g. Walk 20 min" maxlength="50" autocomplete="off" aria-label="New habit">
+      <button class="addbtn" id="add" type="button">Add</button>
+    </div>
+    <div class="seg">
+      <button type="button" data-v="week">Week</button>
+      <button type="button" data-v="month">Month</button>
+    </div>
+    <div class="nav" id="nav" hidden>
+      <button type="button" id="prev" aria-label="Previous month">‹</button>
+      <b id="mlabel"></b>
+      <button type="button" id="next" aria-label="Next month">›</button>
+    </div>
+    <div id="list"></div>
+    <p class="msg" id="app-msg" role="status"></p>
+  </section>
+</main>
+<script type="module" src="/main.js"></script>
+</body>
+</html>
